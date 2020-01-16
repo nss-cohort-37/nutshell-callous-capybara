@@ -12,7 +12,7 @@ const eventHub = document.querySelector(".container")
 export const LoginList = () => {
   
   const users = useUsers()
- 
+  console.log(users)
 // refactor this for specific user 
   eventHub.addEventListener("loginButtonClicked", event => {
     const email = event.detail.email 
@@ -20,12 +20,17 @@ export const LoginList = () => {
     const password = event.detail.password 
     console.log(password)
     const matchingEmailObject=users.find(user => {
-      return user.email === email
+      if(user.email === email){
+        return user 
+      }
     })
     console.log("matching object", matchingEmailObject)
     
 // ask someone about incorrect username
-    if (email === matchingEmailObject.email && password === matchingEmailObject.password){
+    if(matchingEmailObject === undefined){
+      console.log("username DOES NOT EXIST")
+    }
+    else if (email === matchingEmailObject.email && password === matchingEmailObject.password){
       console.log("They Match")
       sessionStorage.setItem("activeUser", matchingEmailObject.id)
       console.log(matchingEmailObject.id)

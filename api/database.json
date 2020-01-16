@@ -19,6 +19,16 @@
       "email": "aja",
       "password": "aja",
       "id": 6
+    },
+    {
+      "email": "shmo",
+      "password": "shmo",
+      "id": 7
+    },
+    {
+      "email": "cat",
+      "password": "cat",
+      "id": 8
     }
   ],
   "messages": [
