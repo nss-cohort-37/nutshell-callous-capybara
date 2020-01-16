@@ -54,11 +54,21 @@ export const loginComponent = () => {
           
                         }
                        saveUsers(newUser)
-    
+                       .then(newUser =>{
+                        sessionStorage.setItem("activeUser", newUser.id)
+                       })
+                       console.log(newUser)
+          
+              
+              //  render main view 
+              
+            }
+            // get the newUser that was added and get the id from it but really we need to find the email where they 
+            
+            
           }
 
-        }
-
+        
 
       )
       
