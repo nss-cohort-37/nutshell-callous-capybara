@@ -1,0 +1,55 @@
+{
+  "users":[
+    {
+      "id":1, 
+      "email":"steve",
+      "password":"steve"
+    },
+    {
+      "id":2, 
+      "email":"mo",
+      "password":"mo"
+    }
+  ],
+  "messages":[
+    {
+      "id":1, 
+      "userId":1,
+      "message":"Hello!"
+    }
+  ],
+  "news":[
+    {
+      "id":1, 
+      "userId":"steve",
+      "title":"Title 1", 
+      "url":"url1.com", 
+      "synopsis":"Synop 1"
+    }
+  ],
+  "friends":[
+    {
+      "id":1, 
+      "activeUserId":"1",
+      "userId":"2"
+    }
+  ],
+  "tasks":[
+    {
+      "id":1, 
+      "userId":"2", 
+      "task":"Take out the garbage", 
+      "completionDate":"1/20/20"
+    }
+  ], 
+  "events":[
+    {
+      "id":1, 
+      "userId":"2", 
+      "name":"Event 1", 
+      "eventDate":"1/14/20", 
+      "location":"NSS"
+    }
+  ]
+
+}
