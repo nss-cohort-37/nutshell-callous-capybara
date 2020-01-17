@@ -1,55 +1,69 @@
 {
-  "users":[
+  "users": [
     {
-      "id":1, 
-      "email":"steve",
-      "password":"steve"
+      "id": 1,
+      "email": "steve",
+      "password": "steve"
     },
     {
-      "id":2, 
-      "email":"mo",
-      "password":"mo"
+      "id": 2,
+      "email": "mo",
+      "password": "mo"
+    },
+    {
+      "email": "leah",
+      "password": "leah",
+      "id": 3
+    },
+    {
+      "email": "test",
+      "password": "test",
+      "id": 4
+    },
+    {
+      "email": "last",
+      "password": "last",
+      "id": 5
     }
   ],
-  "messages":[
+  "messages": [
     {
-      "id":1, 
-      "userId":1,
-      "message":"Hello!"
+      "id": 1,
+      "userId": 1,
+      "message": "Hello!"
     }
   ],
-  "news":[
+  "news": [
     {
-      "id":1, 
-      "userId":"steve",
-      "title":"Title 1", 
-      "url":"url1.com", 
-      "synopsis":"Synop 1"
+      "id": 1,
+      "userId": "steve",
+      "title": "Title 1",
+      "url": "url1.com",
+      "synopsis": "Synop 1"
     }
   ],
-  "friends":[
+  "friends": [
     {
-      "id":1, 
-      "activeUserId":"1",
-      "userId":"2"
+      "id": 1,
+      "activeUserId": "1",
+      "userId": "2"
     }
   ],
-  "tasks":[
+  "tasks": [
     {
-      "id":1, 
-      "userId":"2", 
-      "task":"Take out the garbage", 
-      "completionDate":"1/20/20"
+      "id": 1,
+      "userId": "2",
+      "task": "Take out the garbage",
+      "completionDate": "1/20/20"
     }
-  ], 
-  "events":[
+  ],
+  "events": [
     {
-      "id":1, 
-      "userId":"2", 
-      "name":"Event 1", 
-      "eventDate":"1/14/20", 
-      "location":"NSS"
+      "id": 1,
+      "userId": "2",
+      "name": "Event 1",
+      "eventDate": "1/14/20",
+      "location": "NSS"
     }
   ]
-
 }
