@@ -43,9 +43,10 @@ export const loginComponent = () => {
       // makes sure unique email, passwords match and then post 
 
      getUser(email).then(
-        (result) =>{
+        result =>{
           if(result.length > 0 ){
             console.log("email taken ", result)
+            // add prompt here 
             return
           }
           else if(result.length === 0 && password === confirmPassword)
@@ -59,7 +60,7 @@ export const loginComponent = () => {
                         }
           saveUsers(newUser)
           .then(getUsers).then(
-            (newestUser) =>{
+            () =>{
                 const users=useUsers()
                 const newestUserObject=users.find(user=> {return user.email===email})
                 console.log(newestUserObject)

@@ -24,6 +24,16 @@
       "email": "last",
       "password": "last",
       "id": 5
+    },
+    {
+      "email": "kevin",
+      "password": "kevin",
+      "id": 6
+    },
+    {
+      "email": "aja",
+      "password": "aja",
+      "id": 7
     }
   ],
   "messages": [
