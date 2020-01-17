@@ -126,7 +126,7 @@ export const loginComponent = () => {
         </fieldset>
         <fieldset id="loginButtons">
         <button class="loginButton">Login</button> 
-      <button class="registerNowButton">Sign Up</button>
+      <button type="button" class="registerNowButton">Sign Up</button>
         </fieldset>
     `;
   };
