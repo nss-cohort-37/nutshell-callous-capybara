@@ -11,74 +11,29 @@
       "password": "mo"
     },
     {
-      "email": "poo",
-      "password": "poo",
+      "email": "leah",
+      "password": "leah",
+      "id": 3
+    },
+    {
+      "email": "test",
+      "password": "test",
+      "id": 4
+    },
+    {
+      "email": "last",
+      "password": "last",
       "id": 5
+    },
+    {
+      "email": "kevin",
+      "password": "kevin",
+      "id": 6
     },
     {
       "email": "aja",
       "password": "aja",
-      "id": 6
-    },
-    {
-      "email": "shmo",
-      "password": "shmo",
       "id": 7
-    },
-    {
-      "email": "cat",
-      "password": "cat",
-      "id": 8
-    },
-    {
-      "email": "dog",
-      "password": "dog",
-      "id": 9
-    },
-    {
-      "email": "pup",
-      "password": "pup",
-      "id": 10
-    },
-    {
-      "email": "la",
-      "password": "la",
-      "id": 11
-    },
-    {
-      "email": "da",
-      "password": "da",
-      "id": 12
-    },
-    {
-      "email": "pa",
-      "password": "pa",
-      "id": 13
-    },
-    {
-      "email": "ba",
-      "password": "ba",
-      "id": 14
-    },
-    {
-      "email": "fhf",
-      "password": "fhf",
-      "id": 15
-    },
-    {
-      "email": "ka",
-      "password": "ka",
-      "id": 16
-    },
-    {
-      "email": "it",
-      "password": "it",
-      "id": 17
-    },
-    {
-      "email": "jgj",
-      "password": "jgj",
-      "id": 18
     }
   ],
   "messages": [

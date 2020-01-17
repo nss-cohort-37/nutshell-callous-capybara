@@ -1,7 +1,7 @@
 // username, password, login button, custom event for login button clicked
-import { saveUsers, getUser } from "./LoginDP.js";
 
-// username, password, login button, custom event for login button clicked
+import { saveUsers, getUser, getUsers, useUsers } from "./LoginDP.js";
+
 
 const contentTarget = document.querySelector(".loginForm");
 const eventHub = document.querySelector(".container")
@@ -43,63 +43,50 @@ export const loginComponent = () => {
       // makes sure unique email, passwords match and then post 
 
      getUser(email).then(
-        (result) =>{
+
+        result =>{
           if(result.length > 0 ){
             console.log("email taken ", result)
+            // add prompt here 
+            return
           }
-          else if(result.length === 0 && password === confirmPassword){
+          else if(result.length === 0 && password === confirmPassword)
+          console.log(result)
+          {
+
+        
     
             const newUser = {
                           "email" : email,
                           "password" : password
           
                         }
-                       saveUsers(newUser)
-                       .then(newUser =>{
-                        sessionStorage.setItem("activeUser", newUser.id)
-                       })
-                       console.log(newUser)
-          
+
+          saveUsers(newUser)
+          .then(getUsers).then(
+            () =>{
+                const users=useUsers()
+                const newestUserObject=users.find(user=> {return user.email===email})
+                console.log(newestUserObject)
+                sessionStorage.setItem("activeUser", newestUserObject.id)
+              }
+              )
+                  
+                      //  .then(newUser =>{
+                      //   
+                      //  })
+                      //  console.log(newUser)
+
               
               //  render main view 
               
             }
-            // get the newUser that was added and get the id from it but really we need to find the email where they 
-            
-            
+
+   
           }
-
-        
-
       )
-      
 
 
-
-
-      // console.log(email)
-      
-      // for (const user of users) {
-          
-      //         if (user.email === email) {
-      //           console.log("email is taken, sorry ")
-      //         }else if(user.email !== email && password === confirmPassword ){
-      //           // post array
-      //           const newUser = {
-      //             "email" : email,
-      //             "password" : password
-  
-      //           }
-              
-      //           saveUsers(newUser)
-      //           // use a fetch call 
-
-      //           // take the id of response and save to session storage
-
-      //         }
-          
-      // }
-     
     }
   })
 
