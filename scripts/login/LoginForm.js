@@ -90,6 +90,21 @@ export const loginComponent = () => {
     }
   })
 
+  eventHub.addEventListener("click", event => {
+    if (event.target.classList.contains("loginButton")){
+      const element = document.getElementById("loginForm")
+      element.classList.add("hidden")
+      const showElement = document.getElementById("dashboard")
+      showElement.classList.remove("hidden")
+    }
+  })
+  eventHub.addEventListener("click", event => {
+    if (event.target.classList.contains("registerButton")){
+      const element = document.getElementById("loginForm")
+      element.classList.add("hidden")
+    }
+  })
+
 
 
 

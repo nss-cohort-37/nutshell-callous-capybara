@@ -1,2 +1,51 @@
 @import "./login/login.css"; 
 
+
+.dashboard {
+    border: 1px solid black;
+    margin: 2px;
+    width: 50px;
+}
+.chatNewsContainer {
+    border: 1px solid black;
+    margin: 2px;
+    width: 50px;
+}
+.eventTaskContainer {
+    border: 1px solid black;
+    margin: 2px;
+    width: 50px;
+}
+.friendContainer {
+    border: 1px solid black;
+    margin: 2px;
+    width: 50px;
+}
+
+
+.newsView {
+    border: 1px solid black;
+    margin: 2px;
+    width: 50px;
+}
+.chatView {
+    border: 1px solid black;
+    margin: 2px;
+    width: 50px;
+}
+.eventView {
+    border: 1px solid black;
+    margin: 2px;
+    width: 50px;
+}
+.friendView {
+    border: 1px solid black;
+    margin: 2px;
+    width: 50px;
+}
+.taskView {
+    border: 1px solid black;
+    margin: 2px;
+    width: 50px;
+}
+
