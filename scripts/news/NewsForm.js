@@ -39,7 +39,7 @@ export const articleComponent = () => {
             <input type="url" name='link' id='link'>      
           </fieldset>
           <fieldset id="submitArticle">
-        <button class="submitArticleButton">Submit Article</button> 
+        <button type="button" class="submitArticleButton">Submit Article</button> 
         </fieldset>
         `;
       };

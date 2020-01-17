@@ -122,7 +122,7 @@ export const loginComponent = () => {
       <fieldset id="registrationForm" class="hidden registration">
         <label for="confirmPassword">Password Confirmation</label>
         <input type="text" name='confirmPassword' id='confirmPassword'>   
-        <button class="registerButton">Register</button>   
+        <button type="button" class="registerButton">Register</button>   
         </fieldset>
         <fieldset id="loginButtons">
         <button class="loginButton">Login</button> 
