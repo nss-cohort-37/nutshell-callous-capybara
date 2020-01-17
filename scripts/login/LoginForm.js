@@ -1,7 +1,7 @@
 // username, password, login button, custom event for login button clicked
+
 import { saveUsers, getUser, getUsers, useUsers } from "./LoginDP.js";
 
-// username, password, login button, custom event for login button clicked
 
 const contentTarget = document.querySelector(".loginForm");
 const eventHub = document.querySelector(".container")
@@ -43,6 +43,7 @@ export const loginComponent = () => {
       // makes sure unique email, passwords match and then post 
 
      getUser(email).then(
+
         result =>{
           if(result.length > 0 ){
             console.log("email taken ", result)
@@ -52,12 +53,15 @@ export const loginComponent = () => {
           else if(result.length === 0 && password === confirmPassword)
           console.log(result)
           {
+
+        
     
             const newUser = {
                           "email" : email,
                           "password" : password
           
                         }
+
           saveUsers(newUser)
           .then(getUsers).then(
             () =>{
@@ -72,14 +76,16 @@ export const loginComponent = () => {
                       //   
                       //  })
                       //  console.log(newUser)
-          
+
               
               //  render main view 
               
             }
+
    
           }
       )
+
 
     }
   })
