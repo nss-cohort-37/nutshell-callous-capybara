@@ -6,6 +6,7 @@ import { useFriends } from "../friends/FriendsDP.js";
 
 const contentTarget = document.querySelector(".articleList");
 const eventHub = document.querySelector(".container")
+const contentElement=document.querySelector(".articleFriends")
 
 export const newsListComponent = () => {
     const news = useNews()
@@ -27,17 +28,26 @@ export const newsListComponent = () => {
             // return html
 
 
-            let friendArticleArray=[]
             
+        // filter through friends array to filter only active user's friends
+            let activeUserFriendsArray=friends.filter(friend => {
+              return friend.activeUserId === parseInt(sessionStorage.getItem('activeUser'), 10)})
+              console.log(activeUserFriendsArray)
 
-            let activeUserFriendsArray=friends.filter(friend => {return friend.activeUserId === parseInt(sessionStorage.getItem('activeUser'), 10)})
 
-            activeUserFriendsArray.map(friend => {return friend.user.id})
-           
-            console.log(friendArticleArray)
-            contentTarget.innerHTML = friendArticleArray.map( art => newsCardComponent(art)).join("")
 
-            
+            contentElement.innerHTML=activeUserFriendsArray.map(friend => {
+
+              const newsFriends=news.filter(article => article.userId===friend.userId)
+              console.log(newsFriends)
+              const html =newsFriends.map(art =>newsCardComponent(art)).join("")
+              return html
+             
+
+
+            })
+
+        
         }
         render()
 
