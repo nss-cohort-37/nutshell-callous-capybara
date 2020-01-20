@@ -6,6 +6,7 @@ export const taskCardComponent = (task) => {
     <input type="checkbox" id="taskCheckBox">
     <h4 class="taskName">${task.task}</h4>
     <button id="deleteTask--${task.id}">Delete Task</button>
+    <button id="editTask--${task.id}">Edit Task</button>
     </section>
     `
   }
