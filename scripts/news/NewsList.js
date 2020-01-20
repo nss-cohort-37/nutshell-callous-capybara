@@ -1,6 +1,8 @@
 import { useNews } from "./NewsDP.js";
 import { newsCardComponent } from "./News.js";
 import { useFriends } from "../friends/FriendsDP.js";
+import { newsFriendCardComponent } from "./NewsFriends.js";
+
 
 // render events from API both users and friends, custom event for edit, delete eventHub
 
@@ -11,6 +13,22 @@ const contentElement=document.querySelector(".articleFriends")
 export const newsListComponent = () => {
     const news = useNews()
     const friends = useFriends()
+
+    eventHub.addEventListener("click", event => {
+        if (event.target.id.startsWith("editArticle--")){
+            const [prefix, id] = event.target.id.split("--")
+            const foundArticle = news.find( 
+                (individualArticle) => {
+                    return individualArticle.id === parseInt(id, 10)
+                }
+            )
+            console.log("foundArticle", foundArticle)
+            document.querySelector("#title").value = foundArticle.title 
+            document.querySelector("#link").value = foundArticle.url
+            document.querySelector("#summary").value = foundArticle.synopsis
+        }
+
+    } )
 
     eventHub.addEventListener("loginButtonClicked", event => {
 
@@ -40,7 +58,7 @@ export const newsListComponent = () => {
 
               const newsFriends=news.filter(article => article.userId===friend.userId)
               console.log(newsFriends)
-              const html =newsFriends.map(art => newsCardComponent(art)).join("")
+              const html =newsFriends.map(art => newsFriendCardComponent(art)).join("")
               return html
              
 

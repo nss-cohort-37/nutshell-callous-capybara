@@ -16,6 +16,7 @@ export const taskListComponent = () =>{
     const activeUserTaskArray=taskArray.filter(task => {
      return task.userId === parseInt(sessionStorage.getItem('activeUser'), 10)
     })
+    console.log(activeUserTaskArray)
     contentTarget.innerHTML= activeUserTaskArray.map(task=> taskCardComponent(task)).join("")
 
   }
