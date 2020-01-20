@@ -14,21 +14,27 @@ export const newsListComponent = () => {
     const news = useNews()
     const friends = useFriends()
 
-    eventHub.addEventListener("click", event => {
-        if (event.target.id.startsWith("editArticle--")){
-            const [prefix, id] = event.target.id.split("--")
-            const foundArticle = news.find( 
-                (individualArticle) => {
-                    return individualArticle.id === parseInt(id, 10)
-                }
-            )
-            console.log("foundArticle", foundArticle)
-            document.querySelector("#title").value = foundArticle.title 
-            document.querySelector("#link").value = foundArticle.url
-            document.querySelector("#summary").value = foundArticle.synopsis
-        }
+    // const displayNews = (newsArray) => { 
+    //     // only want it to render the edited article 
+    //     contentTarget.innerHTML = `
+    //     ${
+    //         newsArray.map(article => { 
+    //             return newsCardComponent(article)
+    //         }).join("")
+    //     }
+    //     `
+    // }
 
-    } )
+    // eventHub.addEventListener("articleCreated", event => {
+    //     const createdArticle = useNews()
+    //     displayNews(createdArticle)
+    // })
+
+
+    // eventHub.addEventListener("articleHasBeenEdited", event => {
+    //     const updatedArticle = useNews()
+    //     displayNews(updatedArticle)
+    // })
 
     eventHub.addEventListener("loginButtonClicked", event => {
 
