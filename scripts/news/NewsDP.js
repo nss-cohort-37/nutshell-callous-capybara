@@ -26,6 +26,17 @@ export const saveNews = article => {
        })
        .then(getNews)
      }
-
+     
+     export const editNews = (articleObject) => {
+        return fetch(`http://localhost:8088/news/${articleObject.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(articleObject)
+        })
+            .then(getNews)
+    
+    }
 
 

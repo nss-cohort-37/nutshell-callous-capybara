@@ -1,6 +1,8 @@
 import { useNews } from "./NewsDP.js";
 import { newsCardComponent } from "./News.js";
 import { useFriends } from "../friends/FriendsDP.js";
+import { newsFriendCardComponent } from "./NewsFriends.js";
+
 
 // render events from API both users and friends, custom event for edit, delete eventHub
 
@@ -8,9 +10,29 @@ const contentTarget = document.querySelector(".articleList");
 const eventHub = document.querySelector(".container")
 const contentElement=document.querySelector(".articleFriends")
 
+const displayNews = (updatedArticles) => { 
+        // only want it to render the edited article 
+        const articleUserArray = updatedArticles.filter(
+            article => {
+                return article.userId === parseInt(sessionStorage.getItem('activeUser'), 10)
+            }
+        ) 
+        contentTarget.innerHTML = articleUserArray.map(art => newsCardComponent(art)).join("")
+        }
 export const newsListComponent = () => {
     const news = useNews()
     const friends = useFriends()
+
+    eventHub.addEventListener("articleCreated", event => {
+        const createdArticle = useNews()
+        displayNews(createdArticle)
+    })
+
+
+    eventHub.addEventListener("articleHasBeenEdited", event => {
+        const updatedArticle = useNews()
+        displayNews(updatedArticle)
+    })
 
     eventHub.addEventListener("loginButtonClicked", event => {
 
@@ -40,7 +62,7 @@ export const newsListComponent = () => {
 
               const newsFriends=news.filter(article => article.userId===friend.userId)
               console.log(newsFriends)
-              const html =newsFriends.map(art => newsCardComponent(art)).join("")
+              const html =newsFriends.map(art => newsFriendCardComponent(art)).join("")
               return html
              
 
@@ -56,3 +78,4 @@ export const newsListComponent = () => {
     })
 
 }
+export default displayNews

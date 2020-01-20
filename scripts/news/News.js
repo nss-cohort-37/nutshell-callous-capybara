@@ -7,7 +7,7 @@ export const newsCardComponent = (articleArray) => {
       <h4 class="articleTitle">Title:${articleArray.title}</h4>
       <div class="articleSynopsis">Synopsis:${articleArray.synopsis}</div>
       <div class="articleUrl">Url:${articleArray.url}</div>
-      <button id="editArticleButton">Edit Article</button>
+      <button id="editArticle--${articleArray.id}">Edit Article</button>
       </section>
       `
     }
