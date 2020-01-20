@@ -1,4 +1,5 @@
-import { saveNews, editNews, useNews} from "./NewsDP.js";
+import { saveNews, editNews, useNews, getNews} from "./NewsDP.js";
+import displayNews from "./NewsList.js";
 
 // news form--title, summary, url, date.now() 
 // add news button, editButtonClicked listens to Custom Event
@@ -10,12 +11,11 @@ const eventHub = document.querySelector(".container")
 
 export const articleComponent = () => {
 
-  const news = useNews()
   eventHub.addEventListener("click", event => {
-  
+    const updatedNews = useNews()
     if (event.target.id.startsWith("editArticle--")){
         const [prefix, id] = event.target.id.split("--")
-        const foundArticle = news.find( 
+        const foundArticle = updatedNews.find( 
             (individualArticle) => {
                 return individualArticle.id === parseInt(id, 10)
             }
@@ -24,18 +24,19 @@ export const articleComponent = () => {
         document.querySelector("#title").value = foundArticle.title 
         document.querySelector("#link").value = foundArticle.url
         document.querySelector("#summary").value = foundArticle.synopsis
+        document.querySelector("#articleId").value = foundArticle.id
     }
 
 } )
 
 
-
     eventHub.addEventListener("click", event => {
-      if (event.target.classList.contains("submitArticleButton")) {
       
+      if (event.target.classList.contains("submitArticleButton")) {
+        
+        const news = useNews()
         const hiddenInputValue = document.querySelector("#articleId").value 
-
-      if (hiddenInputValue != ""){
+      if (hiddenInputValue !== ""){
 
         const editedArticle = {
           "id": parseInt(document.querySelector("#articleId").value, 10),
@@ -47,9 +48,9 @@ export const articleComponent = () => {
 
         editNews(editedArticle).then(() => {
           eventHub.dispatchEvent(new CustomEvent("articleHasBeenEdited"))
-        })
+      })
+      }
 
-      } 
         else {  
           const newArticle = {
               "title": document.querySelector("#title").value,
