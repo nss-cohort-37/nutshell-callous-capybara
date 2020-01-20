@@ -102,6 +102,8 @@ export const loginComponent = () => {
     if (event.target.classList.contains("registerButton")){
       const element = document.getElementById("loginForm")
       element.classList.add("hidden")
+      const showElement = document.getElementById("dashboard")
+      showElement.classList.remove("hidden")
     }
   })
 
@@ -126,7 +128,7 @@ export const loginComponent = () => {
         </fieldset>
         <fieldset id="loginButtons">
         <button class="loginButton">Login</button> 
-      <button type="button" class="registerNowButton">Sign Up</button>
+        <button type="button" class="registerNowButton">Sign Up</button>
         </fieldset>
     `;
   };

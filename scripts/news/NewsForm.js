@@ -11,12 +11,15 @@ const eventHub = document.querySelector(".container")
 export const articleComponent = () => {
 
     eventHub.addEventListener("click", event => {
-        if (event.target.classList.contains("submitArticleButton")) {
+      if (event.target.classList.contains("submitArticleButton")) {
+       
+          
           const newArticle = {
               title: document.querySelector("#title").value,
               synopsis: document.querySelector("#summary").value,
               url: document.querySelector("#link").value,
               userId: parseInt(sessionStorage.getItem('activeUser'), 10)
+              
           } 
           saveNews(newArticle)
         }
@@ -41,6 +44,7 @@ export const articleComponent = () => {
           <fieldset id="submitArticle">
         <button type="button" class="submitArticleButton">Submit Article</button> 
         </fieldset>
+
         `;
       };
       render()
