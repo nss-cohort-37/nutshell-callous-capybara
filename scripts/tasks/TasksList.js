@@ -34,14 +34,13 @@ export const taskListComponent = () =>{
 
 eventHub.addEventListener("click", event => {
   if(event.target.id.startsWith("taskCheckBox")){
-    var checkedOrNot = document.getElementById("taskCheckBox").checked
-  if (checkedOrNot===true){
+    // var checkedOrNot = document.getElementById("taskCheckBox").checked
+
     console.log("this should be deleted")
+    const element = document.getElementById("taskCard")
+      element.classList.add("hidden")
 
-  }else if(checkedOrNot===false){
-    console.log("nothing needs to happen")
-  }
-
+ 
  }
  
 })
