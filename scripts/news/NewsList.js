@@ -40,12 +40,12 @@ export const newsListComponent = () => {
 
               const newsFriends=news.filter(article => article.userId===friend.userId)
               console.log(newsFriends)
-              const html =newsFriends.map(art =>newsCardComponent(art)).join("")
+              const html =newsFriends.map(art => newsCardComponent(art)).join("")
               return html
              
 
 
-            })
+            }).join("")
 
         
         }

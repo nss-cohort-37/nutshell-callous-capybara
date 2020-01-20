@@ -6,7 +6,9 @@ import { articleComponent } from "./news/NewsForm.js";
 import { getNews } from "./news/NewsDP.js";
 import { newsListComponent } from "./news/NewsList.js";
 import { getFriends } from "./friends/FriendsDP.js";
-
+import { taskComponent } from "./tasks/TasksForm.js";
+import { getTasks } from "./tasks/TasksDP.js";
+import { taskListComponent } from "./tasks/TasksList.js";
 
 getUsers()
 .then(loginComponent)
@@ -15,5 +17,8 @@ getUsers()
 .then(getFriends)
 .then(newsListComponent)
 .then(articleComponent)
+.then(getTasks)
+.then(taskComponent)
+.then(taskListComponent)
 
 
