@@ -12,7 +12,9 @@ const eventHub = document.querySelector(".container")
 export const articleComponent = () => {
 
   eventHub.addEventListener("click", event => {
+    
     const updatedNews = useNews()
+
     if (event.target.id.startsWith("editArticle--")){
         const [prefix, id] = event.target.id.split("--")
         const foundArticle = updatedNews.find( 

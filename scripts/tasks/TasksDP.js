@@ -8,8 +8,18 @@ export const getTasks = () => fetch("http://localhost:8088/tasks")
         .then(res => res.json())
         .then(parsedTasks => tasks = parsedTasks)
 
-
-
+  export const editTasks = (taskObject) => {
+          return fetch(`http://localhost:8088/tasks/${taskObject.id}`, {
+              method: "PUT",
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify(taskObject)
+          })
+              .then(getTasks)
+      
+      }
+  
 
 export const saveTasks = task => {
       return fetch('http://localhost:8088/tasks', {
