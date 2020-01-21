@@ -26,6 +26,23 @@ export const messageListComponent = () => {
 
     })
 
+    eventHub.addEventListener("messageHasBeenEdited", event => {
+        const updatedMessages = useMessage()
+        const render = () => {
+            contentTarget.innerHTML = `
+            ${
+                updatedMessages.map(
+                    singleMessage => {
+                        return messageComponent(singleMessage)
+                    }
+                ).join("")
+            }
+            `
+        }
+        render()
+
+    })
+
 
     eventHub.addEventListener("loginButtonClicked", event => {
         const messages = useMessage()

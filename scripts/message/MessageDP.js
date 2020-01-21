@@ -26,3 +26,16 @@ export const useMessage = () => {
         )
         return sortedByDate
       }
+
+
+export const editMessages = (messageObject) => {
+        return fetch(`http://localhost:8088/messages/${messageObject.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(messageObject)
+        })
+            .then(getMessages)
+    
+    }
