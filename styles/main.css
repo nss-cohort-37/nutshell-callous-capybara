@@ -1,5 +1,7 @@
 @import "./login/login.css"; 
 @import "./news/news.css";
+@import "./friends/friends.css";
+@import "./nav/nav.css";
 
 
 .dashboard {

@@ -16,16 +16,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+
   <title>Nutshell</title>
 <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
+
+  
   <main class="container">
+
+    
 
     <section class="loginForm" id="loginForm"></section>
 
     <article class="hidden dashboard" id="dashboard">
+      <header>
+      <nav><button class="button show__itinerary" onclick="openNav()">MY TRIPS</button></nav>
+    </header>
+
+
+        <aside class="itinerary" id="itinerary__aside">
+
+            <div id="mySideItinerary" class="side--itinerary transparent">
+              <div href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</div>
+              <div id="itinerary__container"></div>
+            </div>
+        
+          </aside>
 
       <div class="chatNewsContainer">
         <section class="chatView">Message</section>
@@ -54,6 +73,16 @@
 
 
 </body>
+
 <script type="module" src="scripts/main.js"></script>
+<script>
+	const openNav = () => {
+		document.getElementById("mySideItinerary").style.width = "35%";
+	}
+
+	const closeNav = () => {
+		document.getElementById("mySideItinerary").style.width = "0";
+	}
+</script>
 </html>
 

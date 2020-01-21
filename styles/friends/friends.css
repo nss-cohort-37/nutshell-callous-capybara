@@ -1,0 +1,114 @@
+@media screen and (max-height: 450px) {
+    .side--itinerary {padding-top: 15px;}
+    .side--itinerary a {font-size: 18px;}
+  }
+  
+  aside {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .side--itinerary {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: 0.5s;
+    box-shadow: -65px 0px 25px -10px rgba(0,0,0,0.65);
+  }
+  
+  
+  .side--itinerary:first-child {
+    padding-top: 40px;
+  }
+  
+  .side--itinerary:last-child {
+   padding-bottom: 50px;
+  
+  }
+  
+  .itinerary__content {
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 2rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    text-align:center;
+    background-color: slategrey;
+    border-radius: 4px;
+    /* border: .04rem groove black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    padding: 15px 0 15px 0;
+  
+    align-items: center;
+    box-shadow: 0px 0px 5px 0px #272c2f;
+  }
+  
+  .side--itinerary .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .side--itinerary .closebtn:hover {
+    transition-duration: .3s;
+    color: #d7c780;
+    cursor: pointer;
+  }
+  
+  
+  
+  .itinerary__buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 120px;
+  }
+  
+  
+  .button__details:hover {
+    transition-duration: .3s;
+    color: white;
+    cursor: pointer;
+    background-color: #527D90;
+    
+  }
+  
+  
+  
+  
+  .button__delete:hover {
+    transition-duration: .3s;
+    color: white;
+    cursor: pointer;
+    background-color: #527D90;
+  }
+  
+  .button__events:hover {
+    transition-duration: .3s;
+    color: white;
+    cursor: pointer;
+    background-color: #527D90;
+  }
+  
+  /* STYLING SAVED ITINERARY CARDS */
+  .itinerary__name {
+    font-family: sans-serif;
+    font-size: 24px;
+  }
+  
+  .itinerary__content {
+    
+    font-size: 16.5px;
+  }
+  
