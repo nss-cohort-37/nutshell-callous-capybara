@@ -16,10 +16,21 @@ export const taskListComponent = () =>{
     const activeUserTaskArray=taskArray.filter(task => {
      return task.userId === parseInt(sessionStorage.getItem('activeUser'), 10)
     })
+    
     contentTarget.innerHTML= activeUserTaskArray.map(task=> taskCardComponent(task)).join("")
 
   }
-  
+  eventHub.addEventListener("taskEdited" , click => {
+        const updatedTask = useTasks()
+        render(updatedTask)
+
+  })
+  eventHub.addEventListener("taskCreated" , click => {
+    const updatedTask = useTasks()
+    render(updatedTask)
+
+})
+
   eventHub.addEventListener("loginButtonClicked", event => {
     render(tasks)
   })
@@ -32,18 +43,18 @@ export const taskListComponent = () =>{
     }
 })
 
-eventHub.addEventListener("click", event => {
-  if(event.target.id.startsWith("taskCheckBox")){
-    // var checkedOrNot = document.getElementById("taskCheckBox").checked
+// eventHub.addEventListener("click", event => {
+//   if(event.target.id.startsWith("taskCheckBox")){
+//     // var checkedOrNot = document.getElementById("taskCheckBox").checked
 
-    console.log("this should be deleted")
-    const element = document.getElementById("taskCard")
-      element.classList.add("hidden")
+//     console.log("this should be deleted")
+//     const element = document.getElementById("taskCard")
+//       element.classList.add("hidden")
 
  
- }
+//  }
  
-})
+// })
 
 
 

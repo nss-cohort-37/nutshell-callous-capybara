@@ -1,4 +1,5 @@
-import { saveNews } from "./NewsDP.js";
+import { saveNews, editNews, useNews, getNews} from "./NewsDP.js";
+
 
 // news form--title, summary, url, date.now() 
 // add news button, editButtonClicked listens to Custom Event
@@ -10,29 +11,72 @@ const eventHub = document.querySelector(".container")
 
 export const articleComponent = () => {
 
+  eventHub.addEventListener("click", event => {
+    
+    const updatedNews = useNews()
+
+    if (event.target.id.startsWith("editArticle--")){
+        const [prefix, id] = event.target.id.split("--")
+        const foundArticle = updatedNews.find( 
+            (individualArticle) => {
+                return individualArticle.id === parseInt(id, 10)
+            }
+        )
+        console.log("foundArticle", foundArticle)
+        document.querySelector("#title").value = foundArticle.title 
+        document.querySelector("#link").value = foundArticle.url
+        document.querySelector("#summary").value = foundArticle.synopsis
+        document.querySelector("#articleId").value = foundArticle.id
+    }
+
+} )
+
+
     eventHub.addEventListener("click", event => {
+      
       if (event.target.classList.contains("submitArticleButton")) {
-       
-          
+        
+        const news = useNews()
+        const hiddenInputValue = document.querySelector("#articleId").value 
+      if (hiddenInputValue !== ""){
+
+        const editedArticle = {
+          "id": parseInt(document.querySelector("#articleId").value, 10),
+          "title": document.querySelector("#title").value,
+          "synopsis": document.querySelector("#summary").value,
+          "url": document.querySelector("#link").value,
+          "userId": parseInt(sessionStorage.getItem('activeUser'), 10)
+        }
+
+        editNews(editedArticle).then(() => {
+          eventHub.dispatchEvent(new CustomEvent("articleHasBeenEdited"))
+      })
+      }
+
+        else {  
           const newArticle = {
-              title: document.querySelector("#title").value,
-              synopsis: document.querySelector("#summary").value,
-              url: document.querySelector("#link").value,
-              userId: parseInt(sessionStorage.getItem('activeUser'), 10)
+              "title": document.querySelector("#title").value,
+              "synopsis": document.querySelector("#summary").value,
+              "url": document.querySelector("#link").value,
+              "userId": parseInt(sessionStorage.getItem('activeUser'), 10)
               
           } 
-          saveNews(newArticle)
+          saveNews(newArticle).then(() => {
+            eventHub.dispatchEvent(new CustomEvent("articleCreated"))
+          })
         }
-        }) 
+    }}) 
 
 
     const render = () => {
         contentTarget.innerHTML = `
           <fieldset>
-            <label for="title">Title</label>
-            <input type="text" name='title' id='title'>      
+          
+          <label for="title">Title</label>
+          <input type="text" name='title' id='title'>      
           </fieldset>
           <fieldset>
+            <input type="hidden" name="articleId" id="articleId">
             <label for="summary">Summary</label>
             <input type="text" name='summary' id='summary'>      
           </fieldset>
