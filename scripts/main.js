@@ -13,6 +13,9 @@ import { eventComponent } from "./events/EventsForm.js";
 import { eventListComponent } from "./events/EventsList.js";
 import { getEvents } from "./events/EventsDP.js";
 import { friendsListComponent } from "./friends/FriendsList.js";
+import { messageComponent } from "./message/MessageForm.js";
+import { getMessages } from "./message/MessageDP.js";
+import { messageListComponent } from "./message/MessageList.js";
 
 getUsers()
 .then(loginComponent)
@@ -29,4 +32,8 @@ getUsers()
 .then(eventListComponent)
 .then(getFriends)
 .then(friendsListComponent)
+.then(getMessages)
+.then(messageComponent)
+.then(messageListComponent)
+
 

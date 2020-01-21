@@ -16,19 +16,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+
   <title>Nutshell</title>
 <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
+
+  
   <main class="container">
+    
 
     <section class="loginForm" id="loginForm"></section>
 
     <article class="hidden dashboard" id="dashboard">
+      <header>
+          <span class="app__name">NUTSHELL</span>
+          <button class="show__friends" onclick="openNav()">FRIENDS</button>
+      </header>
+
+
+        <aside class="friends" id="friends__aside">
+
+            <div id="mySideFriends" class="side--friends transparent">
+              <div href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</div>
+              <div id="friendsContainer">
+                <section class="friendView">Friend?</section>
+              </div>
+            </div>
+        
+          </aside>
 
       <div class="chatNewsContainer">
         <section class="chatView">Message</section>
+          <div class="messageForm"></div>
         <section class="newsView">
           <div class="articleForm"></div>
           <div class="articleList"></div>
@@ -44,10 +67,6 @@
         <section class="taskView"></section>
       </div>    
 
-      <aside class="friendContainer">
-        <section class="friendView">Friend?</section>
-      </aside>
-
     </article>
 
 
@@ -56,6 +75,16 @@
 
 
 </body>
+
 <script type="module" src="scripts/main.js"></script>
+<script>
+	const openNav = () => {
+		document.getElementById("mySideFriends").style.width = "35%";
+	}
+
+	const closeNav = () => {
+		document.getElementById("mySideFriends").style.width = "0";
+	}
+</script>
 </html>
 
