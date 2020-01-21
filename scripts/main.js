@@ -9,6 +9,9 @@ import { getFriends } from "./friends/FriendsDP.js";
 import { taskComponent } from "./tasks/TasksForm.js";
 import { getTasks } from "./tasks/TasksDP.js";
 import { taskListComponent } from "./tasks/TasksList.js";
+import { eventComponent } from "./events/EventsForm.js";
+import { eventListComponent } from "./events/EventsList.js";
+import { getEvents } from "./events/EventsDP.js";
 
 getUsers()
 .then(loginComponent)
@@ -20,5 +23,8 @@ getUsers()
 .then(getTasks)
 .then(taskComponent)
 .then(taskListComponent)
+.then(getEvents)
+.then(eventComponent)
+.then(eventListComponent)
 
 
