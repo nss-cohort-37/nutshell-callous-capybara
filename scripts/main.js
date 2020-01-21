@@ -12,6 +12,9 @@ import { taskListComponent } from "./tasks/TasksList.js";
 import { eventComponent } from "./events/EventsForm.js";
 import { eventListComponent } from "./events/EventsList.js";
 import { getEvents } from "./events/EventsDP.js";
+import { messageComponent } from "./message/MessageForm.js";
+import { getMessages } from "./message/MessageDP.js";
+import { messageListComponent } from "./message/MessageList.js";
 
 getUsers()
 .then(loginComponent)
@@ -26,5 +29,8 @@ getUsers()
 .then(getEvents)
 .then(eventComponent)
 .then(eventListComponent)
+.then(getMessages)
+.then(messageComponent)
+.then(messageListComponent)
 
 
