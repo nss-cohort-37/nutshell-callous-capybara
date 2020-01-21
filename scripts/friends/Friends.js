@@ -2,10 +2,9 @@
 export const friendCardComponent = (friend) => {
   return `
   <section class="friendCard">
-    <h4 class="friendUsername">Title:${friend.user.email}</h4>
-    <div class="articleSynopsis">Synopsis:${friend.synopsis}</div>
-    <div class="articleUrl">Url:${friend.url}</div>
-    <button id="deleteFriend--${friend.id}">Edit Article</button>
+    <h4 class="friendUsername">Username:${friend.user.email}</h4>
+    <div class="friendsStockPhoto"><img alt="imagePlaceholder" src=""></div>
+    <button id="deleteFriend--${friend.id}">Delete Friend</button>
     </section>
     `
   }
