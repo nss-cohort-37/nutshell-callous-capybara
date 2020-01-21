@@ -1,20 +1,20 @@
 @media screen and (max-height: 450px) {
-    .side--itinerary {padding-top: 15px;}
-    .side--itinerary a {font-size: 18px;}
+    .side--friends {padding-top: 15px;}
+    .side--friends a {font-size: 18px;}
   }
   
   aside {
     font-family: "Lato", sans-serif;
   }
   
-  .side--itinerary {
+  .side--friends {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: white;
+    background-color: greenyellow;
     overflow-x: hidden;
     overflow-y: scroll;
     transition: 0.5s;
@@ -22,16 +22,16 @@
   }
   
   
-  .side--itinerary:first-child {
+  .side--friends:first-child {
     padding-top: 40px;
   }
   
-  .side--itinerary:last-child {
+  .side--friends:last-child {
    padding-bottom: 50px;
   
   }
   
-  .itinerary__content {
+  .friends__content {
     text-decoration: none;
     font-size: 20px;
     line-height: 2rem;
@@ -52,7 +52,7 @@
     box-shadow: 0px 0px 5px 0px #272c2f;
   }
   
-  .side--itinerary .closebtn {
+  .side--friends .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
@@ -60,22 +60,35 @@
     margin-left: 50px;
   }
   
-  .side--itinerary .closebtn:hover {
+  .side--friends .closebtn:hover {
     transition-duration: .3s;
-    color: #d7c780;
+    color: greenyellow;
     cursor: pointer;
   }
   
   
   
-  .itinerary__buttons {
+  .friends__buttons {
     display: flex;
     justify-content: center;
     flex-direction: column;
     max-width: 120px;
   }
+
+ 
   
-  
+  .show__friends {
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    margin-top: 10px;
+    display: flex; 
+    justify-content: center;
+    
+  }
+
   .button__details:hover {
     transition-duration: .3s;
     color: white;
@@ -101,13 +114,13 @@
     background-color: #527D90;
   }
   
-  /* STYLING SAVED ITINERARY CARDS */
-  .itinerary__name {
+  /* STYLING SAVED friends CARDS */
+  .friends__name {
     font-family: sans-serif;
     font-size: 24px;
   }
   
-  .itinerary__content {
+  .friends__content {
     
     font-size: 16.5px;
   }
