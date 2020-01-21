@@ -9,6 +9,7 @@ const eventHub = document.querySelector(".container")
 export const taskComponent = () =>{
 
   eventHub.addEventListener("click", event => {
+
     const updatedTask = useTasks()
     
     if (event.target.id.startsWith("editTask--")){
@@ -29,7 +30,7 @@ export const taskComponent = () =>{
     if (event.target.classList.contains("submitTaskButton")) {
       
         const hiddenInputValue = document.querySelector("#taskId").value
-        console.log(hiddenInputValue)
+        
 
         if (hiddenInputValue !== ""){
           const editedTask = { 
