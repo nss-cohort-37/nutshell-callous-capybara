@@ -1,5 +1,5 @@
 import { saveNews, editNews, useNews, getNews} from "./NewsDP.js";
-import displayNews from "./NewsList.js";
+
 
 // news form--title, summary, url, date.now() 
 // add news button, editButtonClicked listens to Custom Event
