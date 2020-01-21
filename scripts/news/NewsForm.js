@@ -75,9 +75,9 @@ export const articleComponent = () => {
           <label for="title">Title</label>
           <input type="text" name='title' id='title'>      
           </fieldset>
-          <fieldset>
+          <fieldset class="ui form">
             <input type="hidden" name="articleId" id="articleId">
-            <label for="summary">Summary</label>
+            <label for="summary field">Summary</label>
             <input type="text" name='summary' id='summary'>      
           </fieldset>
           <fieldset>
