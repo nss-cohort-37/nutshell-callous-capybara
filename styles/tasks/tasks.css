@@ -1,0 +1,38 @@
+.taskForm {
+    display: flex;
+    background-color:rgb(241, 241, 241);
+}
+
+.taskForm fieldset {
+    width: 100%;
+    justify-content: space-between;
+    border: none;
+}
+
+.submitTaskButton {
+    margin: 20px 0px 12px 25px;
+    
+}
+
+
+.taskCard {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    border: 2px solid rgb(241, 241, 241);
+}
+
+.taskName {
+    margin: 10px;
+}
+
+.submitTaskButton {
+    vertical-align: center;
+}
+
+
+
+

@@ -31,7 +31,7 @@ export const taskComponent = () =>{
         <input type="text" name='name' id='name'>      
       </fieldset>
       <fieldset>
-      <label for="completionDate">Expected Completion Date</label>
+      <label for="completionDate">Completion Date</label>
       <input type="date" name='completionDate' id='completionDate'>
       </fieldset>
       <fieldset id="submitTask">

@@ -28,7 +28,6 @@ export const articleComponent = () => {
 
     const render = () => {
         contentTarget.innerHTML = `
-          
           <fieldset>
             <label for="title">Title</label>
             <input type="text" name='title' id='title'>      
