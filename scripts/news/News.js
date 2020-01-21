@@ -4,10 +4,10 @@
 export const newsCardComponent = (articleArray) => {
     return `
     <section class="articleCard">
-      <h4 class="articleTitle">Title:${articleArray.title}</h4>
-      <div class="articleSynopsis">Synopsis:${articleArray.synopsis}</div>
-      <div class="articleUrl">Url:${articleArray.url}</div>
-      <button id="editArticle--${articleArray.id}">Edit Article</button>
+      <h4 class="articleTitle">${articleArray.title}</h4>
+      <div class="articleSynopsis">${articleArray.synopsis}</div>
+      <div class="articleUrl">${articleArray.url}</div>
+      <button id="editArticleButton">Edit Article</button>
       </section>
       `
     }

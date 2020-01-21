@@ -70,7 +70,6 @@ export const articleComponent = () => {
 
     const render = () => {
         contentTarget.innerHTML = `
-          
           <fieldset>
           
           <label for="title">Title</label>
