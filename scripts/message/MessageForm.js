@@ -64,7 +64,7 @@ export const messageComponent = ()=> {
 const render = () => {
     contentTarget.innerHTML = `
       <fieldset>
-      <label for="message">Message</label>
+      <label class="submitMessage" for="message">Message</label>
       <input type="text" name='message' id="message">
       <input type="hidden" name="messageId" id="messageId">     
       <button type="button" class="submitMessageButton">Send</button> 

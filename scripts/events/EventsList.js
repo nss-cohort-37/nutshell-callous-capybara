@@ -7,7 +7,7 @@ import { useFriends } from "../friends/FriendsDP.js";
 
 const contentTarget = document.querySelector(".eventView");
 const eventHub = document.querySelector(".container")
-const contentElement=document.querySelector(".eventFriends")
+const contentElement = document.querySelector(".eventFriends")
 
 
 const displayEvents = (updatedEvents) => { 

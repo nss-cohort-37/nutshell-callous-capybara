@@ -3,6 +3,7 @@
 
 export const newsCardComponent = (articleArray) => {
     return `
+    <hr/>
     <section class="articleCard">
       <h4 class="articleTitle">${articleArray.title}</h4>
       <div class="articleSynopsis">${articleArray.synopsis}</div>

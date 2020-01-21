@@ -1,22 +1,25 @@
-.articleForm {
+
+.sectionTitle {
+    text-align:center;
+}
+section.eventForm {
     display: flex;
     flex-direction: row;
+    flex-shrink: 20%;
     background-color:rgb(241, 241, 241);
+    margin: 2%;
 }
 
-.articleForm fieldset{
-    width: 100%;
+section.eventForm fieldset{
+    /* width: 50%; */
     justify-content: space-between;
     border: none;
     display:inline-block;
 
 }
 
-.articleUrl {
-    font-style: italic;
-}
-
-section.friendArticleCard {
+section.friendEventCard {
     font-style: italic;
     background-color: cornsilk;
+    padding: 1%;
 }

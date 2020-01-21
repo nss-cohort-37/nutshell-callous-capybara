@@ -1,0 +1,14 @@
+section.friendMessagesCard {
+    font-style: italic;
+    background-color: cornsilk;
+    margin: .5% 0 .5% 0;
+}
+
+.activeUserMessageCard {
+    margin: .5% 0 .5% 0;
+}
+
+.messageForm {
+    border: none;
+}
+
