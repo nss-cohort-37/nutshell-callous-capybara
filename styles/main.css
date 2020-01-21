@@ -3,11 +3,14 @@
 @import "./friends/friends.css";
 @import "./nav/nav.css";
 @import "./tasks/tasks.css";
+@import "./userEvents/events.css";
+@import "./message/message.css";
+
 
 
 .dashboard {
     margin: 0px;
-    margin-top: 100px;
+    margin-top: 70px;
     width: 100%;
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
@@ -23,44 +26,66 @@
     flex-basis: 70%;
 }
 .eventTaskContainer {
-    border: 1px solid black;
+    border: none;
     margin: 0px 30px 0px 0px;
     width: auto;
     display: flex;
     flex-direction: column;
-    padding: 1%;
+    padding: .5%;
     flex-basis: 20%;
     align-items: center;
 }
 
 
-
-
-
 .newsView {
     margin-top: 10px;
-    border: 1px solid black;
+    border: .08rem solid rgb(194, 192, 192);
     margin: 2px;
     width: 98%;
     padding: .5%;
+    border-left: .1rem solid yellowgreen;
+    border-right: .1rem solid yellowgreen;
+    height: 200px;
+    overflow: auto;
+    background-color: lightgrey;
 }
 .chatView {
-    border: 1px solid black;
+
+    border: .08rem solid rgb(194, 192, 192);
+    margin-top: -5px;
     margin: 2px;
     width: 98%;
+    border-left: .1rem solid yellowgreen;
+    border-right: .1rem solid yellowgreen;
     padding: .5%;
+    height: 300px;
+    overflow: auto;
+    background-color: lightgrey;
 
 }
-.eventView {
-    border: 1px solid black;
+.eventList{
+    border: none;
     margin: 2px;
     width: 500px;
-    padding: .5%;
+    border-left: .08rem solid yellowgreen;
+    border-right: .08rem solid yellowgreen;
+    border-bottom: .08rem solid yellowgreen;
+    padding: 2%;
+    height: 300px;
+    overflow: auto;
+    background-color: lightgrey;
 }
 
 .taskView {
     margin: 2px;
-    width: 500px;
+    width: auto;
     padding: .5%;
+    background-color: lightgrey;
+    height: 200px;
+    overflow: auto;
 }
 
+hr {
+    border-color: green;
+    opacity: 70%;
+}

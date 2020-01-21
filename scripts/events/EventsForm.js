@@ -69,9 +69,8 @@ export const eventComponent = () => {
     contentTarget.innerHTML = `
       
       <fieldset>
-      <section class="sectionTitle">Event</section>
-      <br>
-      <label for="title">Title</label>
+
+      <label for="title">Event</label>
       <input type="text" name='eventName' id='eventName'>      
       </fieldset>
       <fieldset>

@@ -1,6 +1,7 @@
 .taskForm {
     display: flex;
     background-color:rgb(241, 241, 241);
+    margin: 2%;
 }
 
 .taskForm fieldset {
@@ -10,7 +11,7 @@
 }
 
 .submitTaskButton {
-    margin: 20px 0px 12px 25px;
+    margin: 20px 0px 0px 25px;
     
 }
 
