@@ -9,6 +9,7 @@ const eventHub = document.querySelector(".container")
 export const taskComponent = () =>{
 
   eventHub.addEventListener("click", event => {
+
     const updatedTask = useTasks()
     
     if (event.target.id.startsWith("editTask--")){
@@ -29,7 +30,7 @@ export const taskComponent = () =>{
     if (event.target.classList.contains("submitTaskButton")) {
       
         const hiddenInputValue = document.querySelector("#taskId").value
-        console.log(hiddenInputValue)
+        
 
         if (hiddenInputValue !== ""){
           const editedTask = { 
@@ -68,8 +69,8 @@ export const taskComponent = () =>{
         <input type="text" name='name' id='name'>      
       </fieldset>
       <fieldset>
-      <label for="completionDate">Expected Completion Date</label>
-      <input type="date" name="completionDate" id="completionDate">
+      <label for="completionDate">Completion Date</label>
+      <input type="date" name='completionDate' id='completionDate'>
       </fieldset>
       <fieldset id="submitTask">
     <button type="button" class="submitTaskButton">Submit Task</button> 

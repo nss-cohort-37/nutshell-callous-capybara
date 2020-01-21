@@ -1,0 +1,14 @@
+.articleForm {
+    display: flex;
+    background-color:rgb(241, 241, 241);
+}
+
+.articleForm fieldset{
+    width: 100%;
+    justify-content: space-between;
+    border: none;
+}
+
+.articleUrl {
+    font-style: italic;
+}
