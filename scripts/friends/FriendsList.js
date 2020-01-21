@@ -1,4 +1,4 @@
-import { useFriends } from "./FriendsDP.js"
+import { useFriends, deleteFriend } from "./FriendsDP.js"
 import { friendCardComponent } from "./Friends.js"
 
 // listens to custom event of the search values
@@ -12,16 +12,26 @@ const contentTarget=document.querySelector(".friendView")
 
 export const friendsListComponent = () => {
 
-  eventHub.addEventListener("loginButtonClicked", event => {
-
-    const friends = useFriends()
-  
+  const render = (friends) => {
     let activerUserFriends=friends.filter( ind => {
       return ind.activeUserId === parseInt(sessionStorage.getItem('activeUser'), 10)
     })
+
+    contentTarget.innerHTML= activerUserFriends.map(friend => friendCardComponent(friend)).join("")
   
-    contentTarget.innerHTML= activerUserFriends.map(friend => friendCardComponent(friend))
+  }
+  eventHub.addEventListener("loginButtonClicked", event => {
+    const friends = useFriends()
+    render(friends)
   
   })
+
+  eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id.startsWith("deleteFriend--")) {
+        const [prefix, id] = clickEvent.target.id.split("--")
+      
+        deleteFriend(id).then(() => render(useFriends()) )
+    }
+})
 
   }
