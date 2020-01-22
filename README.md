@@ -23,6 +23,8 @@ These are all of the skills and concepts that Callous Capybara used to create Nu
 
 ![nutshell features](./nutshellpage.png)
 
+![nutshell features](./nutshellfriends.png)
+
 ## How to Launch Nutshell
 1. Clone the repository from Github
 1. Open your terminal and type the command "npm install" to install Webpack
