@@ -4,7 +4,7 @@
 1. Kevin Penny
 1. Aja Washington
 1. Namita Manohar
-# Nutshell Overview 
+## Nutshell Overview 
 
 Nutshell is a dashboard for people to organize their daily tasks, events, news articles, friends, and chat messages.
 These are all of the skills and concepts that Callous Capybara used to create Nutshell.
@@ -20,7 +20,9 @@ These are all of the skills and concepts that Callous Capybara used to create Nu
 1. Modular code
 1. Relational data
 1. Session Storage
+
 ![nutshell features](./nutshellpage.png)
+
 ## How to Launch Nutshell
 1. Clone the repository from Github
 1. Open your terminal and type the command "npm install" to install Webpack
