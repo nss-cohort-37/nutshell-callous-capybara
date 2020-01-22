@@ -4,8 +4,11 @@
 1. Kevin Penny
 1. Aja Washington
 1. Namita Manohar
+# Nutshell Overview 
+
 Nutshell is a dashboard for people to organize their daily tasks, events, news articles, friends, and chat messages.
 These are all of the skills and concepts that Callous Capybara used to create Nutshell.
+
 1. Functions
 1. Databases/API
 1. Github
