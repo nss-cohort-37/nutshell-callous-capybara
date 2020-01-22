@@ -35,20 +35,20 @@ export const friendsListComponent = () => {
 
   eventHub.addEventListener("click", event => {
     if(event.target.id.startsWith("addFriend--")){
-      const allFriends = useFriends()
+      const allUsers = useUsers()
       // debugger
       const [prefix, id] = event.target.id.split("--")
-      const newFriendId = allFriends.filter(friend => {
-        return friend.userId === parseInt(id, 10)
+      const newUserId = allUsers.filter(user => {
+        return user.id === parseInt(id, 10)
       })
-      console.log("new friend ID", newFriendId)
-      const neededUserId = newFriendId.find(user => {
+      console.log("new friend ID", newUserId)
+      const neededUserId = newUserId.find(user => {
         return user
       })
 
       const newFriend = {
         "activeUserId": parseInt(sessionStorage.getItem('activeUser'), 10),
-        "userId": neededUserId.userId
+        "userId": neededUserId.id
       }
       saveFriends(newFriend).then(() => render(useFriends()) )
     }
