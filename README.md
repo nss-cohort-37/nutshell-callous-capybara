@@ -23,7 +23,7 @@ These are all of the skills and concepts that Callous Capybara used to create Nu
 
 ![nutshell features](./nutshellpage.png)
 
-![nutshell features](./nutshellfriends.png)
+![nutshell features](./nutshellfriends.PNG)
 
 ## How to Launch Nutshell
 1. Clone the repository from Github
